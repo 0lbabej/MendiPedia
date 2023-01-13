@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MendiPedia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/CardElement"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_margin="50dp"
+        android:background="@drawable/rounded_big_rose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewChoosedElementId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="."
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/textViewChoosedElementName"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="95dp"
+            android:gravity="center"
+            android:text=".."
+            android:textSize="70sp" />
+
+        <TextView
+            android:id="@+id/textViewChoosedElementMass"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewChoosedElementId"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toStartOf="@+id/textViewChoosedElementName"
+            android:foregroundGravity="left"
+            android:gravity="center_vertical"
+            android:text="........"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardElement"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textViewChoosedElementDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="........."
+            android:textSize="25sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
