@@ -29,10 +29,15 @@ class AboutActivity : AppCompatActivity() {
 
     private fun getData(){
         var intent = intent.extras
-        var elementName = intent!!.getString("elementName")
+        var elementName = intent!!.getString("choosedElementName")
+        var elementId = intent.getString("choosedElementId")
+        var elementMass = intent.getString("choosedElementMass")
+        var elementDescription = intent.getString("choosedElementDescription")
+        title = "Information about element  '" + elementName + "'"
         textViewChoosedElementName.text = elementName
-//        textViewChoosedElementId.text = elementId
-//        textViewChoosedElementMass.text = elementMass
-//        textViewChoosedElementDescription.text = elementDescription
+        textViewChoosedElementId.text = elementId
+        textViewChoosedElementMass.text = elementMass
+        textViewChoosedElementDescription.text = elementDescription
+
     }
 }
