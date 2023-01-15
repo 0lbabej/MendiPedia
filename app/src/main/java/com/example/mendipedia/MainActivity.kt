@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), ElementsAdapter.ClickListener{
 
         title = "List of Elements"
 
+
         initData()
     }
 
