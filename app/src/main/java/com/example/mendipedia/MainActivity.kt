@@ -24,9 +24,7 @@ class MainActivity : AppCompatActivity(), ElementsAdapter.ClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         title = "List of Elements"
-
 
         initData()
     }
@@ -45,24 +43,16 @@ class MainActivity : AppCompatActivity(), ElementsAdapter.ClickListener{
 
     private fun createElements(): List<ElementModel>{
         var elementList = ArrayList<ElementModel>()
-        elementList.add(ElementModel("H", "1", "1,00797", "Водород"))
-        elementList.add(ElementModel("He", "2", "4,0026", "Гелий"))
-        elementList.add(ElementModel("Li", "3", "6,939", "Литий"))
-        elementList.add(ElementModel("Be", "4", "9,0122", "Бериллий"))
-        elementList.add(ElementModel("B", "5", "10,811", "Бор"))
-        elementList.add(ElementModel("C", "6", "12,01115", "Углерод"))
-        elementList.add(ElementModel("N", "7", "14,0067", "Азот"))
-        elementList.add(ElementModel("O", "8", "15,9994", "Кислород"))
-        elementList.add(ElementModel("F", "9", "18,9984", "Фтор"))
-        elementList.add(ElementModel("Ne", "10", "20,179", "Неон"))
-        elementList.add(ElementModel("Na", "11", "22,9898", "Натрий"))
-        elementList.add(ElementModel("Mg", "12", "24,305", "Магний"))
-        elementList.add(ElementModel("Al", "13", "26,9815", "Алюминий"))
-        elementList.add(ElementModel("Si", "14", "28,085", "Кремний"))
-        //        elementList.add(ElementModel("", "", "", ""))
 
+        for (id in 1..118) {
+            val i = id-1
+            elementList.add(ElementModel("${resources.getStringArray(R.array.elementsName)[i]}",
+                "$id","${resources.getStringArray(R.array.elementsMass)[i]}",
+                "${resources.getStringArray(R.array.elementsDescription)[i]}"))
+        }
         return elementList
     }
+
     private fun showData(){
         elementsAdapter.setData(createElements())
     }
